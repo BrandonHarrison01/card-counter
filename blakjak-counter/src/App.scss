@@ -1,0 +1,79 @@
+body {
+    background-color: rgb(41, 41, 41);
+}
+
+.app {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+h1 {
+    font-size: 2rem;
+    margin: 20px;
+    color: rgb(194, 194, 194);
+    font-family: 'Merriweather', serif
+}
+
+.thresh {
+    width: 330px;
+    height: 180px;
+    padding: 10px;
+    margin: 15px;
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: rgb(27, 27, 27);
+    color: rgb(112, 112, 112);
+
+    h3 {
+        font-size: 2rem;
+        margin-bottom: 25px;
+        font-family: 'Merriweather', serif
+    }
+
+    h5 {
+        font-family: 'Merriweather', serif;
+        margin: 10px;
+        font-size: 1.1rem;
+    }
+
+    span {
+        padding: 10px;
+        width: 40px;
+        height: 10px;
+        margin: 3px;
+        background-color: rgb(221, 221, 221);
+        border-radius: 3px;
+        color: black;
+    }
+
+    .card-data {
+        font-size: 1.3rem;
+        margin: 35px;
+    }
+    
+}
+
+button {
+    margin-top: 10px;
+    width: 150px;
+    height: 30px;
+    background-color: rgb(212, 212, 212);
+    border-radius: 5px;
+    font-size: 1rem;
+    font-family: 'Merriweather', serif
+}
+
+.red {
+    color: rgb(235, 49, 49)
+}
+
+.yellow {
+    color: rgb(194, 194, 47);
+}
+
+.green {
+    color: rgb(45, 133, 45);
+}
