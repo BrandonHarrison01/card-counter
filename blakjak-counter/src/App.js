@@ -1,4 +1,7 @@
 import React, { useState } from 'react';
+
+import HighCards from './components/HighCards'
+
 import './App.scss';
 
 function App() {
@@ -58,14 +61,7 @@ function App() {
           <h5 className={med >= 50 ? 'green' : med >= 15 ? 'yellow' : 'red'} >{ deck === 0 ? deck : med}% chance of flipping</h5>
         </div>
       </div>
-      <div className='thresh' onClick={() => incrementHigh()} >
-        <h3>Cards</h3> 
-        <span>10</span><span>J</span><span>Q</span><span>K</span><span>A</span>
-        <div className='card-data'>
-          <h5>showing {highThresh}/20 cards</h5>
-          <h5 className={high >= 50 ? 'green' : high >= 20 ? 'yellow' : 'red'} >{ deck === 0 ? deck : high}% chance of flipping</h5>
-        </div>
-      </div>
+      <HighCards high={high} incrementHigh={incrementHigh} highThresh={highThresh} deck={deck} />
       <button onClick={() => reset()}>Reset</button>
     </div>
   );
