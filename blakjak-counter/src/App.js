@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 
 import HighCards from './components/HighCards'
+import MedCards from './components/MedCards'
+import LowCards from './components/LowCards'
 
 import './App.scss';
 
@@ -45,22 +47,8 @@ function App() {
   return (
     <div className="app">
       <h1><span className={deck > 40 ? 'green' : deck > 20 ? 'yellow' : 'red' }>{deck}</span> cards remaining</h1>
-      <div className='thresh' onClick={() => incrementLow()}>
-        <h3>Cards</h3> 
-        <span>2</span><span>3</span><span>4</span><span>5</span><span>6</span>
-        <div className='card-data'>
-          <h5>showing {lowThresh}/20 cards</h5>
-          <h5 className={low >= 50 ? 'green' : low >= 20 ? 'yellow' : 'red'} >{ deck === 0 ? deck : low}% chance of flipping</h5>
-        </div>
-      </div>
-      <div className='thresh' onClick={() => incrementMed()}>
-        <h3>Cards</h3> 
-        <span>7</span><span>8</span><span>9</span>
-        <div className='card-data'>
-          <h5>showing {medThresh}/12 cards</h5>
-          <h5 className={med >= 50 ? 'green' : med >= 15 ? 'yellow' : 'red'} >{ deck === 0 ? deck : med}% chance of flipping</h5>
-        </div>
-      </div>
+      <LowCards low={low} incrementLow={incrementLow} lowThresh={lowThresh} deck={deck} />
+      <MedCards med={med} incrementMed={incrementMed} medThresh={medThresh} deck={deck} />
       <HighCards high={high} incrementHigh={incrementHigh} highThresh={highThresh} deck={deck} />
       <button onClick={() => reset()}>Reset</button>
     </div>
